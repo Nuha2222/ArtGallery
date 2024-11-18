@@ -1,0 +1,219 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url('images/gallery.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-image {
+    background-image: url("images/gallery.jpg");
+    /* Remove the dark gradient */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: #555;
+    color: white;
+}
+
+.login {
+    background-image: url("images/gallery.jpg");
+    /* Remove the dark gradient */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.login p {
+    color: white;
+}
+
+
+
+/* Form container styling */
+form {
+    display: inline-block;
+    background-color: white;
+    padding: 40px;
+
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+/* Heading styling */
+h3 {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    color: #161616;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    font-size: 16px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+
+
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #2980b9;
+    background-color: #fff;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #3498db;
+}
+
+/* Register button styling */
+button {
+    padding: 12px 20px;
+    background-color: #8c00bf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #9b59b6;
+    /* Lighter purple on hover */
+    transform: translateY(-2px);
+}
+
+/* Grid container setup */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid item styling */
+.grid-item {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Image styling */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Description styling */
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+.title h1 {
+    color: white;
+}
