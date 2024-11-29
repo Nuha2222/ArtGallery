@@ -5,14 +5,12 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-image: url('images/gallery.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .hero-image {
     background-image: url("images/gallery.jpg");
-    /* Remove the dark gradient */
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +24,7 @@ body {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #000000;
 }
 
 .hero-text button {
@@ -46,8 +44,6 @@ body {
 }
 
 .login {
-    background-image: url("images/gallery.jpg");
-    /* Remove the dark gradient */
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,12 +53,11 @@ body {
 }
 
 .login p {
-    color: white;
+    color: black;
 }
 
 
 
-/* Form container styling */
 form {
     display: inline-block;
     background-color: white;
@@ -75,15 +70,16 @@ form {
     position: relative;
 }
 
-/* Heading styling */
-h3 {
+h1,
+h2,
+h3,
+p {
     font-family: 'Georgia', serif;
     font-size: 24px;
-    color: white;
+    color: black;
     margin-bottom: 25px;
 }
 
-/* Label styling */
 label {
     font-size: 16px;
     color: #161616;
@@ -92,7 +88,6 @@ label {
     text-align: left;
 }
 
-/* Input fields styling */
 input[type="text"],
 input[type="password"] {
     width: 90%;
@@ -114,7 +109,6 @@ input[type="password"]:focus {
     background-color: #fff;
 }
 
-/* Submit button styling */
 input[type="submit"] {
     width: 100%;
     padding: 14px;
@@ -146,7 +140,6 @@ a:hover {
     color: #3498db;
 }
 
-/* Register button styling */
 button {
     padding: 12px 20px;
     background-color: #8c00bf;
@@ -161,11 +154,9 @@ button {
 
 button:hover {
     background-color: #9b59b6;
-    /* Lighter purple on hover */
     transform: translateY(-2px);
 }
 
-/* Grid container setup */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -174,9 +165,8 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Grid item styling */
 .grid-item {
-    color: white;
+    color: grey;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
@@ -184,22 +174,19 @@ button:hover {
 }
 
 
-/* Image styling */
 .grid-item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Description styling */
 .description {
     margin-top: 10px;
     font-size: 16px;
-    color: #fff;
+    color: black;
     text-align: center;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -215,5 +202,97 @@ button:hover {
 }
 
 .title h1 {
+    color: black;
+}
+
+.artwork {
+    background-color: white;
+}
+
+.descrip {
+    width: 300px;
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.artwork {
+    margin: 100px;
+}
+
+.artwork img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.artwork-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.artist-name {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.art-medium {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.artwork-dimensions {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.artwork-description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.artwork-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.pay-button {
+    background-color: #008CBA;
     color: white;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    border: none;
+}
+
+.pay-button:hover {
+    background-color: #006f8a;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .artwork-card {
+        width: 100%;
+        max-width: 350px;
+    }
 }
