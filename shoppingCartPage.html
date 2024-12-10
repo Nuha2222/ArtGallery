@@ -11,35 +11,128 @@
 <body>
 
     <h1>Your Cart</h1>
+
+    <!-- Cart Items will be dynamically added here -->
     <div id="cartItems"></div>
 
+    <!-- Total Price at the bottom -->
+    <div id="totalAmount" class="total-amount">
+        <p><strong>Total: $0.00</strong></p>
+    </div>
+
+    <!-- Proceed to checkout -->
     <a href="payments.html"><button>Proceed to Checkout</button></a>
 
-    <!-- Include Cart.js -->
-    <script src="cart.js"></script>
+    <!-- Go back shopping -->
+    <a href="art.html"><button>Go Back Shopping</button></a>
 
+    <!-- Include Cart.js -->
     <script>
-        // Display cart items without images
-        document.addEventListener("DOMContentLoaded", function () {
+        // Function to add more of the same item in the cart
+        function addMoreOfItem(index) {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const item = cart[index];
+
+            if (item) {
+                item.quantity += 1; // Increase quantity by 1
+                localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
+                updateCartDisplay(); // Update the cart display
+                sendCartUpdateToServer(item, "add"); // Send update to server
+            }
+        }
+
+        // Function to remove (decrease quantity) of an item in the cart (by index)
+        function removeItemFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const item = cart[index];
+
+            if (item) {
+                if (item.quantity > 1) {
+                    item.quantity -= 1; // Decrease quantity by 1
+                } else {
+                    alert('Quantity cannot go below 1.');
+                }
+                localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
+                updateCartDisplay(); // Update the cart display
+                sendCartUpdateToServer(item, "remove"); // Send update to server
+            }
+        }
+
+        // Function to send the cart update to the server (via AJAX)
+        function sendCartUpdateToServer(item, action) {
+            const userId = 1; // Replace with actual user ID (can be from session or localStorage)
+
+            // Create a form data object
+            const formData = new FormData();
+            formData.append('user_id', userId);
+            formData.append('artwork_title', item.title);
+            formData.append('quantity', item.quantity);
+            formData.append('action', action);
+
+            // Send the data to a PHP script using Fetch API
+            fetch('cart_update.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('Cart updated successfully');
+                    } else {
+                        console.error('Error updating cart:', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // Function to update the cart display and calculate total price
+        function updateCartDisplay() {
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
             const cartItemsContainer = document.getElementById("cartItems");
+            const totalAmountContainer = document.getElementById("totalAmount");
 
             if (cart.length === 0) {
                 cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+                totalAmountContainer.innerHTML = "<p><strong>Total: $0.00</strong></p>";
             } else {
-                cart.forEach(item => {
+                cartItemsContainer.innerHTML = ""; // Clear any existing items
+                let totalPrice = 0;
+
+                cart.forEach((item, index) => {
+                    const itemPrice = parseFloat(item.price.replace('$', '')); // Remove dollar sign and convert to number
+                    const itemTotalPrice = itemPrice * item.quantity; // Calculate total price for this item
+                    totalPrice += itemTotalPrice;
+
                     const itemElement = document.createElement("div");
                     itemElement.classList.add("cart-item");
 
                     itemElement.innerHTML = `
-                        <p><strong>${item.title}</strong></p>
-                        <p>${item.price}</p>
+                        <div class="cart-item-content">
+                            <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+                            <div class="cart-item-details">
+                                <p><strong>${item.title}</strong></p>
+                                <p>Quantity: ${item.quantity}</p>
+                                <p><strong>Total Price: $${itemTotalPrice.toFixed(2)}</strong></p>
+                                <div class="cart-item-actions">
+                                    <button onclick="addMoreOfItem(${index})" class="btn add-more-btn">Add More</button>
+                                    <button onclick="removeItemFromCart(${index})" class="btn remove-btn">Remove</button>
+                                </div>
+                            </div>
+                        </div>
                     `;
 
                     cartItemsContainer.appendChild(itemElement);
                 });
+
+                // Update total amount display
+                totalAmountContainer.innerHTML = `<p><strong>Total: $${totalPrice.toFixed(2)}</strong></p>`;
             }
-        });
+        }
+
+        // Initialize the cart display when the page loads
+        document.addEventListener("DOMContentLoaded", updateCartDisplay);
     </script>
 
 </body>
