@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/water_lilies.jpg">
+        <div class="artwork-title">Water Lilies</div>
+        <div class="artist-name">Claude Monet</div>
+        <div class="art-date">1906</div>
+        <div class="art-medium">Oil on canvas</div>
+        <div class="artwork-dimensions">89.9 × 94.1 cm (35 3/8 × 37 1/16 in.); Framed: 103.2 × 107 × 5.8 cm (40 5/8 × 42
+            1/8 × 2 1/4 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+        Claude Monet’s late water-lily paintings, created between 1897 and 1926, focus on his Giverny garden's pond,
+        replacing his earlier diverse subjects with the timeless motif of water lilies. By his third series, Monet
+        abandoned traditional perspective, creating works like Water Lilies, where the pond's surface becomes the
+        primary focus, blending reflections with floating vegetation.
+    </p>
+
+    <div class="artwork-price">$3,295,024</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="Water Lilies" data-price="$3,295,024" data-image="images/water_lilies.jpg">
+        Add to Cart
+    </button>
+
+
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/ballet.jpg">
+        <div class="artwork-title">Ballet at the Paris Opéra</div>
+        <div class="artist-name">Hilaire Germain Edgar Degas</div>
+        <div class="art-date">1877</div>
+        <div class="art-medium">Pastel over monotype on cream laid paper</div>
+        <div class="artwork-dimensions">Plate: 35.2 × 70.6 cm (13 7/8 × 27 13/16 in.); Sheet: 35.9 × 71.9 cm (14 3/16 ×
+            28 5/16 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+
+        Edgar Degas innovatively combined monotype and pastel techniques in Ballet at the Paris Opéra to capture the
+        fleeting beauty of ballet dancers. Using unconventional perspectives and cropped forms, the painting evokes the
+        spontaneity of a rehearsal, with the dancers' free-flowing hair and the intrusion of orchestra instruments
+        enhancing the immediacy of the scene.
+    </p>
+
+    <div class="artwork-price">$2,016,193</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="Ballet at the Paris Opéra" data-price="$2,016,193"
+        data-image="images/ballet.jpg">
+        Add to Cart
+    </button>
+
+
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+
+    <script src="add_to_cart.js"></script>
+
+
+
+</body>
+
+</html>

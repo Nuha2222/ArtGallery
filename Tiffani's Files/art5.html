@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/blue_and_green_music.jpg">
+        <div class="artwork-title">Blue and Green Music</div>
+        <div class="artist-name">Georgia O'Keeffe</div>
+        <div class="art-date">1919–1921</div>
+        <div class="art-medium">Oil on canvas</div>
+        <div class="artwork-dimensions">58.4 × 48.3 cm (23 × 19 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+        Around 1920, Georgia O'Keeffe explored translating music into visual art, as seen in Blue and Green Music, where
+        colors and forms evoke both nature and sound. Influenced by Vasily Kandinsky’s ideas on art and music, O'Keeffe
+        aimed to achieve pure visual expression without literary references.
+    </p>
+
+    <div class="artwork-price">$2,662,061</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="Blue And Green Music" data-price="$2,662,061"
+        data-image="images/blue_and_green_music.jpg">
+        Add to Cart
+    </button>
+
+
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+
+</body>
+
+</html>
