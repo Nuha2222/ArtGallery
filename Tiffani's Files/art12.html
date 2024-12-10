@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/herring_net.jpg">
+        <div class="artwork-title">The Herring Net</div>
+        <div class="artist-name">Winslow Homer</div>
+        <div class="art-date">1885</div>
+        <div class="art-medium">Oil on canvas</div>
+        <div class="artwork-dimensions">76.5 × 122.9 cm (30 1/8 × 48 3/8 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+
+        In 1883, Winslow Homer moved to Prouts Neck, Maine, where he painted powerful depictions of fishermen battling
+        the sea, a theme that had captivated him since his earlier trips to New England and England. His work, like this
+        painting of two fishermen hauling in herring, emphasizes the heroic struggle between humankind and nature,
+        highlighting the monumental effort of survival in a vast, unpredictable ocean.
+    </p>
+
+    <div class="artwork-price">$1,014,195</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="The Herring Net" data-price="$1,014,195"
+        data-image="images/herring_net.jpg">
+        Add to Cart
+    </button>
+
+
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+
+
+
+</body>
+
+</html>

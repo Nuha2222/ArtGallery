@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+    <div class="artwork">
+        <img src="images/paris_street.jpg">
+        <div class="artwork-title">Paris Street; Rainy Day</div>
+        <div class="artist-name">Gustave Caillebotte</div>
+        <div class="art-date">1877</div>
+        <div class="art-medium">Oil on canvas</div>
+        <div class="artwork-dimensions">212.2 × 276.2 cm (83 1/2 × 108 3/4 in.); Framed: 241.3 × 306.1 × 10.2 cm (95 ×
+            120 1/2 × 4 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+        Gustave Caillebotte’s Paris Street; Rainy Day captures the changing urban landscape of late 19th-century
+        Paris, showing modernity through life-sized figures and an innovative perspective. The painting’s bold
+        composition and contemporary subject matter made it a standout at the 1877 Impressionist exhibition,
+        foreshadowing later works like Seurat’s A Sunday on La Grande Jatte.
+    </p>
+
+    <div class="artwork-price">$1,000,000</div>
+
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="Paris Street; Rainy Day" data-price="$1,000,000"
+        data-image="images/paris_street.jpg">
+        Add to Cart
+    </button>
+
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+</body>
+
+</html>

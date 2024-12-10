@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/weaving.jpg">
+        <div class="artwork-title">Weaving</div>
+        <div class="artist-name">Diego Rivera</div>
+        <div class="art-date">1936</div>
+        <div class="art-medium">Tempera and oil on canvas</div>
+        <div class="artwork-dimensions">66 × 106.7 cm (26 × 42 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+        Georges Seurat's A Sunday on La Grande Jatte depicts people from various social classes in a Paris park,
+        blending modern life with timelessness inspired by ancient art. Painted using pointillism, Seurat applied small
+        dots of color that merge into vibrant, harmonious forms when viewed from a distance.
+    </p>
+
+    <div class="artwork-price">$1,400,058</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="Weaving" data-price="$1,400,058" data-image="images/weaving.jpg">
+        Add to Cart
+    </button>
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+
+</body>
+
+</html>

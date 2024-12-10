@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/nightlife.jpg">
+        <div class="artwork-title">Nightlife</div>
+        <div class="artist-name">Archibald John Motley Jr.</div>
+        <div class="art-date">1943</div>
+        <div class="art-medium">Oil on canvas</div>
+        <div class="artwork-dimensions">91.4 × 121.3 cm (36 × 47 3/4 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+        Archibald Motley’s Nightlife captures the vibrant energy of a crowded Chicago cabaret with dynamic figures,
+        diagonal lines, and vivid magenta and violet tones. Inspired by Edward Hopper’s Nighthawks, Motley uses
+        artificial lighting to highlight social interactions and the lively atmosphere of the scene.
+    </p>
+
+    <div class="artwork-price">$1,000,000</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="Nightlife" data-price="$1,315,035" data-image="images/nightlife.jpg">
+        Add to Cart
+    </button>
+
+
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+
+</body>
+
+</html>

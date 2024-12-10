@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/winter.jpg">
+        <div class="artwork-title">Love of Winter</div>
+        <div class="artist-name">George Wesley Bellows</div>
+        <div class="art-date">1914</div>
+        <div class="art-medium">Oil on canvas</div>
+        <div class="artwork-dimensions">81.6 × 101.6 cm (32 1/2 × 40 1/2 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+        Inspired by a February 1914 blizzard, George Bellows painted Love of Winter to capture the energy of a snowy New
+        York City scene. Using vibrant colors and dynamic brushstrokes, he depicted a diverse group of skaters and
+        onlookers, reflecting the city's varied social classes enjoying public parks and winter leisure.
+    </p>
+
+    <div class="artwork-price">$1,271,016</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="Love of Winter" data-price="$1,271,016" data-image="images/winter.jpg">
+        Add to Cart
+    </button>
+
+
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+
+
+
+
+</body>
+
+</html>

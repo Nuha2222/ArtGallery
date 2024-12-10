@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="artwork">
+        <img src="images/watermill.jpg">
+        <div class="artwork-title">The Watermill with the Great Red Roof</div>
+        <div class="artist-name">Meindert Hobbema</div>
+        <div class="art-date">1660–1670</div>
+        <div class="art-medium">Oil on canvas</div>
+        <div class="artwork-dimensions">
+            81.3 × 110 cm (32 × 43 1/4 in.); Framed: 101.3 × 130.5 × 8.3 cm (39 7/8 × 51 3/8 × 3 1/4 in.)</div>
+    </div>
+
+    <p class="artwork-description">
+
+        Meindert Hobbema, a pupil of Jacob van Ruisdael, frequently depicted watermills in his works, symbolizing both
+        human transience and Dutch industriousness. In The Watermill, the well-dressed figures along the path represent
+        the rewards of hard work and productivity.
+    </p>
+
+    <div class="artwork-price">$1,832,015</div>
+    <!-- Added code -->
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart" data-title="The Watermill with the Great Red Roof" data-price="$1,832,015"
+        data-image="images/watermill.jpg">
+        Add to Cart
+    </button>
+
+
+    <!-- More Added code -->
+    <div class="cart-count">
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+    </div>
+
+    <a href="shoppingCartPage.html">Go to Cart</a>
+
+    <script src="cart.js"></script>
+    <script src="add_to_cart.js"></script>
+
+
+
+</body>
+
+</html>
