@@ -45,13 +45,14 @@
         function removeItemFromCart(index) {
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             const item = cart[index];
-
+        
             if (item) {
                 if (item.quantity > 1) {
                     item.quantity -= 1; // Decrease quantity by 1
                 } else {
-                    alert('Quantity cannot go below 1.');
+                    cart.splice(index, 1); // Remove the item completely if quantity is 1
                 }
+                
                 localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
                 updateCartDisplay(); // Update the cart display
                 sendCartUpdateToServer(item, "remove"); // Send update to server
