@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <!-- Main form -->
-    <form action="checkout.php" method="POST">
+    <form id="checkoutForm" action="checkout.php" method="POST">
         <div class="row">
             <div class="col">
                 <h3 class="title">Billing Address</h3>
@@ -90,9 +90,20 @@
                 </div>
             </div>
         </div>
-        <input type="submit" value="Proceed to Checkout" class="submit_btn">
+        <input type="submit" value="Proceed to Checkout" class="submit_btn" id="submitBtn">
     </form>
 </div>
+
 <script src="./checkout.js"></script>
+<script>
+// Handle form submission and redirect to art.html
+document.getElementById('submitBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent form from submitting
+    // Perform your validation or actions here if needed
+
+    // Redirect to art.html page
+    window.location.href = 'art.html';
+});
+</script>
 </body>
 </html>
