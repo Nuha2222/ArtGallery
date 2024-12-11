@@ -1,4 +1,5 @@
 <?php
+session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -9,10 +10,10 @@ $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CH
 if (!empty($username) && !empty($password)) {
 
     // Database credentials
-    $host = "127.0.0.1";
-    $dbname = "gallery_db";
+    $host = "localhost";
+    $dbname = "ProjectTest";
     $dbusername = "root";
-    $dbpassword = "user123!";
+    $dbpassword = "";
 
     $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
@@ -32,7 +33,7 @@ if (!empty($username) && !empty($password)) {
             // Start a session and redirect to the art gallery page
             session_start();
             $_SESSION['username'] = $username;  // Store the username in session
-            header("Location: /art_gallery/art.html");
+            header("Location: art.html");
             exit;
         } else {
             echo "Incorrect password!";
